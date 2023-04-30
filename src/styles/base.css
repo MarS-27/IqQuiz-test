@@ -1,0 +1,51 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  min-width: var(--min-width);
+  background-color: var(--clr-main-bg);
+  letter-spacing: var(--letter-spacing-sm);
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns:
+    minmax(15px, 1fr)
+    minmax(var(--min-width), var(--max-width))
+    minmax(15px, 1fr);
+}
+
+.grid-content {
+  grid-column: 2 / 3;
+}
+
+.grid-content-full {
+  grid-column: 1 / -1;
+}
